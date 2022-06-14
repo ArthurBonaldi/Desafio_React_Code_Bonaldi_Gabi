@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { Swiper, SwiperProps, SwiperSlide} from 'swiper/react';
 import { Navigation, Pagination, A11y, Scrollbar } from 'swiper';
 
@@ -22,11 +21,46 @@ export default function Slider() {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
             >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            ...
+            <SwiperSlide>
+                <div className='slide'>
+                    <img
+                    className="img"
+                    src="https://m.media-amazon.com/images/I/81W9dIVSmuL._AC_SX695_.jpg"
+                    alt=""
+                    />
+                    <h1>Nome do produto</h1>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='slide'>
+                    <img
+                    className="img"
+                    src="https://m.media-amazon.com/images/I/81W9dIVSmuL._AC_SX695_.jpg"
+                    alt=""
+                    />
+                    <h1>Nome do produto</h1>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='slide'>
+                    <img
+                    className="img"
+                    src="https://m.media-amazon.com/images/I/81W9dIVSmuL._AC_SX695_.jpg"
+                    alt=""
+                    />
+                    <h1>Nome do produto</h1>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='slide'>
+                    <img
+                    className="img"
+                    src="https://m.media-amazon.com/images/I/81W9dIVSmuL._AC_SX695_.jpg"
+                    alt=""
+                    />
+                    <h1>Nome do produto</h1>
+                </div>
+            </SwiperSlide>
         </Swiper>
     );
  }
