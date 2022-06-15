@@ -2,9 +2,9 @@ import {Entity, PrimaryColumn, Column} from "typeorm";
 import { v4 as uuid } from "uuid";
 
 @Entity("brands")
-class Brands {
+class  Brands {
     @PrimaryColumn()
-    readonly id:string;
+    readonly id_brand:string;
 
     @Column()
     name:string;
@@ -13,8 +13,8 @@ class Brands {
     logo:string;
 
     constructor(){
-        if(!this.id){
-            this.id = uuid();
+        if(!this.id_brand){
+            this.id_brand = uuid();
         }
     }
 
