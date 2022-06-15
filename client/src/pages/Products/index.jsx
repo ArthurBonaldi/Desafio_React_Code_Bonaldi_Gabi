@@ -1,4 +1,5 @@
 import React from 'react'
+import { ButtonAddProduct } from '../../components/Buttons/ButtonAddProduct';
 import ContainerCard from '../../components/Card/ContainerCard';
 import { ProductsContainer } from './style'
 
@@ -6,6 +7,7 @@ import { ProductsContainer } from './style'
 export function Products() {
   return (
     <>
+      {/* <ButtonAddProduct></ButtonAddProduct> */}
       <ProductsContainer>
         <input
           type="text"

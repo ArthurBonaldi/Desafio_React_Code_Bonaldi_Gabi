@@ -8,10 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mui/icons-material": "^5.8.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-elastic-carousel": "^0.11.5",
     "react-router-dom": "^6.3.0",
+    "react-super-responsive-table": "^5.2.1",
     "styled-components": "^5.3.5",
     "swiper": "^8.2.4"
   },

@@ -1,4 +1,6 @@
 .card {
+    text-decoration: none;
+    color:#312929;
     overflow: hidden;
     box-shadow: 0 2px 20px #e1e5ee;
     border-radius: 0.2rem;
@@ -7,7 +9,6 @@
     justify-content: space-between;
     cursor: pointer;
     transition: transform 200ms ease-in; 
-
 }
 
 .card__image{
@@ -35,6 +36,7 @@
     color: #3F96CD;
     border-radius: 0.2rem;
     transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
 }
 
 .card:hover {

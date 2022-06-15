@@ -35,13 +35,13 @@ export function Card(props) {
 
     // ------------------------
 
-    <div className="card">
-    <div className="card__body">
-      <img src="https://m.media-amazon.com/images/I/81W9dIVSmuL._AC_SX695_.jpg" class="card__image" />
-      <h2 className="card__title">Nome Produto</h2>
-      <p className="card__preco">Preço</p>
-    </div>
-    <button className="card__btn">View Recipe</button>
-  </div>
+    <a className="card" href="#">
+      <div className="card__body">
+        <img src="https://m.media-amazon.com/images/I/81W9dIVSmuL._AC_SX695_.jpg" class="card__image" />
+        <h2 className="card__title">Nome Produto</h2>
+        <p className="card__preco">Preço</p>
+      </div>
+      <button className="card__btn">View Recipe</button>
+    </a>
   );
 }
