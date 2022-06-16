@@ -11,9 +11,21 @@ const brandController = new BrandsController();
 const authControler = new AuthenticateUserController();
 const productController = new ProductsController();
 
-router.post("/createUser", userController.create);
-router.post("/createBrand", brandController.create);
-router.post("/login", authControler.login);
-router.post("/createProduct", productController.create);
 
+//Brand routes-----------------------------------------------
+router.post("/createBrand", brandController.create);
+router.get("/viewBrand/:id_brand", brandController.view);
+router.get("/deleteBrand/:id_brand", brandController.delete);
+router.post("/updateBrand/:id_brand", brandController.update);
+//-----------------------------------------------------------
+
+//Products Routes -------------------------------------------
+router.post("/createProduct", productController.create);
+router.get("/viewProduct/:id", productController.view);
+router.get("/deleteProduct/:id", productController.delete);
+router.post("/updateProduct/:id", productController.update);
+
+//-----------------------------------------------------------
 export {router};
+router.post("/createUser", userController.create);
+router.post("/login", authControler.login);

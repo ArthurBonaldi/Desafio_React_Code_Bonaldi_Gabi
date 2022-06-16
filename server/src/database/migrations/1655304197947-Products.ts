@@ -23,7 +23,8 @@ export class Products1655304197947 implements MigrationInterface {
                     },
                     {
                         name:"brand",
-                        type:"varchar"
+                        type:"varchar",
+                        isNullable:true
 
                     },
                     {
@@ -37,7 +38,7 @@ export class Products1655304197947 implements MigrationInterface {
                         referencedTableName:"brands",
                         referencedColumnNames:["id_brand"],
                         columnNames:["brand"],
-                        onDelete:"SET NULL",
+                        onDelete:"CASCADE",
                         onUpdate:"SET NULL"
                     }
                 ]

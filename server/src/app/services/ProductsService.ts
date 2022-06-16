@@ -5,10 +5,10 @@ import { ProductsRepositories } from "../repositories/ProductsRepositories";
 
 interface IProductRequest{
     id?:string;
-    nameProduct:string;
-    price:number;
-    brand:string;
-    image:string;
+    nameProduct?:string;
+    price?:number;
+    brand?:string;
+    image?:string;
 }
 
 class ProductsServices{
@@ -32,7 +32,40 @@ class ProductsServices{
         return product
 
     }
+    async view({id}: IProductRequest){
+        const productRepository = getCustomRepository(ProductsRepositories);
+        const productExists = await productRepository.findOne(id)
+        if(!productExists){
+            throw new Error ("Product don't exist")
+        }
+        return productExists;
+    }
 
+    async delete({id}:IProductRequest){
+        const productRepository = getCustomRepository(ProductsRepositories);
+        const productExists = await productRepository.findOne(id);
+        if(!productExists){
+            throw new Error("Product don't exist");
+        }
+        const product = await productRepository.delete(id);
+
+        return product;
+    }
+    async update({id, nameProduct, price, brand, image}: IProductRequest){
+        const productRepository = getCustomRepository(ProductsRepositories);
+        const brandRepositories = getCustomRepository(BrandsRepositories);
+
+        const brandExist = brandRepositories.findOne(brand);
+        if(!brandExist){
+            throw new Error("Brand don't exist");
+        }
+         await productRepository.update({id},{nameProduct, price, brand, image})
+
+        const product = productRepository.findOne(id);
+
+        return product;
+
+    }
 
 }
 
