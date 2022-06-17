@@ -31,6 +31,12 @@ class BrandsController {
 
 
     }
+    async showAll(request:Request, response:Response){
+        const brandServices = new BrandsService();
+        const brand = await brandServices.showAll();
+        return response.json(brand);
+    }
+    
 
 }
 

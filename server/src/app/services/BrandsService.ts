@@ -59,13 +59,21 @@ class BrandsService{
         if(brandExists.name == name){
             throw new Error ("Nome Igual")
         }
-        const brand = await brandRepositories.update({id_brand},{name, logo});
+        await brandRepositories.update({id_brand},{name, logo});
 
         const brandResult = await brandRepositories.findOne({id_brand});
 
         return brandResult
 
     }
+
+    async showAll(){
+        const brandRepositories = getCustomRepository(BrandsRepositories);
+        const brand = await brandRepositories.find();
+        return brand;
+    }
+
+
 }
 
 export {BrandsService};

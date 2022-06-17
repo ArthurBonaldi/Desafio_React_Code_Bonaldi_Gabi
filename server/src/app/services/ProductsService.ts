@@ -1,4 +1,4 @@
-import { getCustomRepository } from "typeorm";
+import { getCustomRepository, Like } from "typeorm";
 import { BrandsRepositories } from "../repositories/BransdsRepositories";
 import { ProductsRepositories } from "../repositories/ProductsRepositories";
 
@@ -65,6 +65,23 @@ class ProductsServices{
 
         return product;
 
+    }
+    async showAll(){
+        const productRepository = getCustomRepository(ProductsRepositories);
+        const product = await productRepository.find({
+            relations:["brands"]
+        });
+        return product;
+    }
+    async showByBrand({brand}:IProductRequest){
+        const productRepository = getCustomRepository(ProductsRepositories);
+        const product = await productRepository.find({brand});
+        return product;
+    }
+    async search({nameProduct}: IProductRequest){
+        const productRepository = getCustomRepository(ProductsRepositories);
+        const product = await productRepository.find({where: {nameProduct: Like(`%${nameProduct}`)}});
+        return product;
     }
 
 }
