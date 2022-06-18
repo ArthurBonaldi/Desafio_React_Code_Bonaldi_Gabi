@@ -4,6 +4,7 @@ import { BrandsController } from "./app/controller/BrandsController";
 import { AuthenticateUserController } from "./app/controller/AuthenticateUserController";
 import { ProductsController } from "./app/controller/ProductsController";
 import { ensureAuthenticate } from "./app/middlewares/ensureAuthenticate";
+import { CartController } from "./app/controller/CartController";
 
 
 const router = Router();
@@ -11,6 +12,7 @@ const userController = new UsersController();
 const brandController = new BrandsController();
 const authControler = new AuthenticateUserController();
 const productController = new ProductsController();
+const cartController = new CartController();
 
 
 //Brand routes-----------------------------------------------
@@ -36,6 +38,12 @@ router.get("/search/:nameProduct", productController.search);
 router.post("/createUser", userController.create);
 //-------------------------------------------------------------
 
+//Cart Route -------------------------------------------
+router.post ("/addCart", cartController.add);
+router.get("/viewcart", cartController.view);
+router.get("/deleteFromCart/:id_cart", cartController.delete);
+
+//------------------------------------------------------
 
 
 router.post("/login", authControler.login);
