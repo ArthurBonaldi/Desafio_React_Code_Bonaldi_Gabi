@@ -1,10 +1,12 @@
 import React from 'react'
+import { FormLogin } from '../../components/Forms/FormLogin';
 import { PageContainer } from '../../GlobalStyle';
 
 export function Admin() {
   return (
     <PageContainer>
-      <h1>Admin</h1>
+      <FormLogin>
+      </FormLogin>
     </PageContainer>
   );
 }

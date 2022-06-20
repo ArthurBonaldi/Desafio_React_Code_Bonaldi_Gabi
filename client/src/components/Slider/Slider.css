@@ -1,0 +1,32 @@
+  .swiper {
+      padding: 32px;
+  }
+
+  .swiper-slide {
+      display: flex;
+      justify-content: center;
+  }
+
+  .swiper-pagination-bullet-active {
+      background-color: #3F96CD
+  }
+
+  .swiper-button-prev {
+      color: #3F96CD
+  }
+
+  .swiper-button-next {
+      color: #3F96CD
+  }
+
+  .img {
+      width: 20em;
+      height: 15em;
+  }
+
+  .slide h1 {
+      display: flex;
+      justify-content: center;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.5em;
+  }
