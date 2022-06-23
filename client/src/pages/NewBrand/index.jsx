@@ -1,10 +1,11 @@
 import React from 'react'
+import { FormCadMarca } from '../../components/Forms/FormCadMarca';
 import { PageContainer } from '../../GlobalStyle';
 
 export function NewBrand() {
   return (
     <PageContainer>
-      <h1>Cadastrar Marca</h1>
+      <FormCadMarca></FormCadMarca>
     </PageContainer>
   );
 }
