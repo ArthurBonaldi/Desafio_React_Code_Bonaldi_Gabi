@@ -1,5 +1,5 @@
 import React from 'react'
-import './FormLogin.css'
+import './Forms.css'
 
 export function FormLogin() {
   return (

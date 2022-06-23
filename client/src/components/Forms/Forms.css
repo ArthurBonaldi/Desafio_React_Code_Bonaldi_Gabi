@@ -28,9 +28,11 @@
   font-family: "Roboto", sans-serif;
 }
 
-input {
+input, select, textarea{
   background: #f2f2f2;
 }
+
+
 
 button {
   background: #3F96CD;
